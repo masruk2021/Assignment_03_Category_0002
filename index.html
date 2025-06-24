@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>assaignment-03</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/98fe65ae2d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="bg-white max-w-[1600px] mx-auto">
+    <header class="bg-gradient-to-r from-[#FFFFFF] to-[#EFEBE3] pt-20">
+      <div class="max-w-[1600px] mx-auto px-12 lg:px-40">
+        <!-- NAVIGATION -->
+        <nav class="flex justify-between items-center">
+          <!-- Logo -->
+          <div>
+            <img
+              src="c2-assets/logo-header.png"
+              alt="logo-header"
+              class="h-12"
+            />
+          </div>
+
+          <div
+            class="hidden md:flex items-center gap-6 text-gray-600 font-semibold"
+          >
+            <ul class="flex gap-4">
+              <li>Product</li>
+              <li>Services</li>
+              <li>Contact us</li>
+            </ul>
+            <div class="flex gap-4 items-center">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <i class="fa-solid fa-cart-shopping"></i>
+              <button class="btn btn-outline btn-success text-white">
+                Login
+              </button>
+              <button class="btn bg-green-500 text-white">Register</button>
+            </div>
+          </div>
+
+          <!-- Hamburger Icon (mobile only) -->
+          <div class="md:hidden">
+            <button id="mobile-menu-button">
+              <i class="fa-solid fa-bars text-2xl text-gray-800"></i>
+            </button>
+          </div>
+        </nav>
+
+        <!-- Mobile Dropdown Menu -->
+        <!-- Mobile Dropdown Menu -->
+        <div
+          id="mobile-menu"
+          class="absolute right-4 top-30 bg-white shadow-lg rounded-xl p-4 w-64 hidden md:hidden z-50"
+        >
+          >
+          <ul class="flex flex-col gap-4 items-end text-right">
+            <li>Product</li>
+            <li>Services</li>
+            <li>Contact us</li>
+          </ul>
+          <div class="flex flex-col gap-4 mt-4 w-full items-end text-right">
+            <div class="flex gap-4 justify-end w-full">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <button class="btn btn-outline btn-success text-white w-[150px]">
+              Login
+            </button>
+            <button class="btn bg-green-500 text-white w-[150px]">
+              Register
+            </button>
+          </div>
+        </div>
+
+        <!-- HERO SECTION -->
+        <div class="text-center mt-10">
+          <h2 class="text-4xl font-bold text-gray-800 leading-tight">
+            Freshness
+            <span class="text-green-500">
+              You Can <br />
+              Count
+            </span>
+            On, Prices You’ll Love!
+          </h2>
+          <p class="text-gray-600 mt-4">
+            Shop your daily essentials at unbeatable prices. From fresh produce
+            to pantry <br />
+            staples, we’ve got you covered every day!
+          </p>
+          <img
+            src="c2-assets/hero-vegetables.png"
+            alt="hero-vegetables"
+            class="mx-auto mt-6"
+          />
+        </div>
+      </div>
+    </header>
+
+    <!-- JavaScript for toggling mobile menu -->
+    <script>
+      const btn = document.getElementById("mobile-menu-button");
+      const menu = document.getElementById("mobile-menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+    <section class="bg-white py-16">
+      <div class="max-w-[1600px] mx-auto px-8 lg:px-40">
+        <h3 class="text-green-600 font-bold text-3xl">Services</h3>
+        <br />
+        <br />
+        <!--div container-->
+        <div class="flex flex-col md:flex-row gap-8">
+          <!-- Card 1 -->
+          <div
+            class="flex-1 bg-[#EFEBE3] shadow-lg rounded-xl text-center items-center my-auto px-16 lg:py-20"
+          >
+            <img
+              src="c2-assets/service.png"
+              alt="service"
+              class="bg-white px-3 py-3 rounded-full mx-auto"
+            />
+            <h2 class="text-2xl font-bold text-gray-800 mb-2">
+              Fresh Vegetables
+            </h2>
+            <p class="text-gray-700">
+              Handpicked every morning, our vegetables come straight from local
+              farms to your kitchen. Crisp, vibrant, and full of flavor
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="flex-1 bg-[#EFEBE3] shadow-lg rounded-xl text-center items-center my-auto px-16 lg:py-20"
+          >
+            <img
+              src="c2-assets/delivery.png"
+              alt="delivery"
+              class="bg-white px-3 py-3 rounded-full mx-auto"
+            />
+            <h2 class="text-2xl font-bold text-gray-800 mb-2">Fast Delivery</h2>
+            <p class="text-gray-700">
+              Handpicked every morning, our vegetables come straight from local
+              farms to your kitchen. Crisp, vibrant, and full of flavor
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="flex-1 bg-[#EFEBE3] shadow-lg rounded-xl text-center items-center my-auto px-16 lg:py-20"
+          >
+            <img
+              src="c2-assets/healthy.png"
+              alt="Daily Essentials"
+              class="bg-white px-3 py-3 rounded-full mx-auto"
+            />
+            <h2 class="text-2xl font-bold text-gray-800 mb-2">
+              Healthy Products
+            </h2>
+            <p class="text-gray-700">
+              Handpicked every morning, our vegetables come straight from local
+              farms to your kitchen. Crisp, vibrant, and full of flavor
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-gradient-to-r from-[#FFFFFF] to-[#EFEBE3] pt-20 pb-16">
+      <div class="max-w-[1600px] mx-auto px-4 sm:px-12 lg:px-[160px]">
+        <h3 class="text-green-600 font-bold text-3xl">Popular Products</h3>
+        <br /><br /><br />
+        <div class="flex flex-col lg:flex-row gap-8">
+          <!-- Left Banner Box -->
+          <div
+            class="bg-gradient-to-r from-[#53DB3A] to-[#FFFFFF] relative rounded-xl py-20 px-6 sm:px-8 flex flex-col justify-between min-h-[440px]"
+          >
+            <!-- Text -->
+            <div class="z-10 relative">
+              <h2 class="text-white font-bold text-3xl mb-4">30% Off</h2>
+              <p
+                class="text-gray-800 mb-6 max-w-xs text-sm sm:text-base leading-relaxed"
+              >
+                I love vegetables and I love them so much — fresh, green, and
+                healthy!
+              </p>
+              <button
+                class="bg-white text-black font-bold px-6 py-2 rounded shadow hover:bg-gray-200 transition"
+              >
+                Buy Now
+              </button>
+            </div>
+            <!-- Image Bottom Right -->
+            <img
+              src="c2-assets/vegetable-offer.png"
+              alt="Offer"
+              class="w-24 sm:w-32 absolute bottom-4 right-4"
+            />
+          </div>
+
+          <!-- Right Grid Cards  container-->
+          <!--div cards-->
+          <div class="grid grid-cols-2 lg:grid-cols-3 gap-3">
+            <!--card 1-->
+            <div class="flex gap-2 bg-white rounded-xl shadow-lg px-5">
+              <div class="flex items-center">
+                <img
+                  src="c2-assets/onion.png"
+                  class="bg-[#C0C0C0] rounded-full mx-auto"
+                  alt=""
+                />
+              </div>
+              <div class="flex flex-col justify-center">
+                <div class="flex items-center gap-2">
+                  <i class="fas fa-star text-orange-400"></i>
+                  <p class="text-xl text-gray-500">4.5</p>
+                </div>
+                <h2 class="text-zinc-800 font-bold text-[15px] lg:text-2xl">
+                  Onion 1 KG
+                </h2>
+                <p class="text-gray-500">₹ 30.00</p>
+              </div>
+            </div>
+            <!--card 2-->
+             <div class="flex gap-2 bg-white rounded-xl shadow-lg px-5">
+              <div class="flex items-center">
+                <img
+                  src="c2-assets/onion.png"
+                  class="bg-[#C0C0C0] rounded-full mx-auto"
+                  alt=""
+                />
+              </div>
+              <div class="flex flex-col justify-center">
+                <div class="flex items-center gap-2">
+                  <i class="fas fa-star text-orange-400"></i>
+                  <p class="text-xl text-gray-500">4.5</p>
+                </div>
+                <h2 class="text-zinc-800 font-bold text-[15px] lg:text-2xl">
+                  Onion 1 KG
+                </h2>
+                <p class="text-gray-500">₹ 30.00</p>
+              </div>
+            </div>
+            <!--card 3-->
+             <div class="flex gap-2 bg-white rounded-xl shadow-lg px-5">
+              <div class="flex items-center">
+                <img
+                  src="c2-assets/onion.png"
+                  class="bg-[#C0C0C0] rounded-full mx-auto"
+                  alt=""
+                />
+              </div>
+              <div class="flex flex-col justify-center">
+                <div class="flex items-center gap-2">
+                  <i class="fas fa-star text-orange-400"></i>
+                  <p class="text-xl text-gray-500">4.5</p>
+                </div>
+                <h2 class="text-zinc-800 font-bold text-[15px] lg:text-2xl">
+                  Onion 1 KG
+                </h2>
+                <p class="text-gray-500">₹ 30.00</p>
+              </div>
+            </div>
+            <!--card 4--> 
+             <div class="flex gap-2 bg-white rounded-xl shadow-lg px-5">
+              <div class="flex items-center">
+                <img
+                  src="c2-assets/onion.png"
+                  class="bg-[#C0C0C0] rounded-full mx-auto"
+                  alt=""
+                />
+              </div>
+              <div class="flex flex-col justify-center">
+                <div class="flex items-center gap-2">
+                  <i class="fas fa-star text-orange-400"></i>
+                  <p class="text-xl text-gray-500">4.5</p>
+                </div>
+                <h2 class="text-zinc-800 font-bold text-[15px] lg:text-2xl">
+                  Onion 1 KG
+                </h2>
+                <p class="text-gray-500">₹ 30.00</p>
+              </div>
+            </div>
+            <!--card 5-->
+             <div class="flex gap-2 bg-white rounded-xl shadow-lg px-5">
+              <div class="flex items-center">
+                <img
+                  src="c2-assets/onion.png"
+                  class="bg-[#C0C0C0] rounded-full mx-auto"
+                  alt=""
+                />
+              </div>
+              <div class="flex flex-col justify-center">
+                <div class="flex items-center gap-2">
+                  <i class="fas fa-star text-orange-400"></i>
+                  <p class="text-xl text-gray-500">4.5</p>
+                </div>
+                <h2 class="text-zinc-800 font-bold text-[15px] lg:text-2xl">
+                  Onion 1 KG
+                </h2>
+                <p class="text-gray-500">₹ 30.00</p>
+              </div>
+            </div>
+             <div class="flex gap-2 bg-white rounded-xl shadow-lg px-5">
+              <div class="flex items-center">
+                <img
+                  src="c2-assets/onion.png"
+                  class="bg-[#C0C0C0] rounded-full mx-auto"
+                  alt=""
+                />
+              </div>
+              <div class="flex flex-col justify-center">
+                <div class="flex items-center gap-2">
+                  <i class="fas fa-star text-orange-400"></i>
+                  <p class="text-xl text-gray-500">4.5</p>
+                </div>
+                <h2 class="text-zinc-800 font-bold text-[15px] lg:text-2xl">
+                  Onion 1 KG
+                </h2>
+                <p class="text-gray-500">₹ 30.00</p>
+              </div>
+            </div>
+             <div class="flex gap-2 bg-white rounded-xl shadow-lg px-5">
+              <div class="flex items-center">
+                <img
+                  src="c2-assets/onion.png"
+                  class="bg-[#C0C0C0] rounded-full mx-auto"
+                  alt=""
+                />
+              </div>
+              <div class="flex flex-col justify-center">
+                <div class="flex items-center gap-2">
+                  <i class="fas fa-star text-orange-400"></i>
+                  <p class="text-xl text-gray-500">4.5</p>
+                </div>
+                <h2 class="text-zinc-800 font-bold text-[15px] lg:text-2xl">
+                  Onion 1 KG
+                </h2>
+                <p class="text-gray-500">₹ 30.00</p>
+              </div>
+            </div>
+             <div class="flex gap-2 bg-white rounded-xl shadow-lg px-5">
+              <div class="flex items-center">
+                <img
+                  src="c2-assets/onion.png"
+                  class="bg-[#C0C0C0] rounded-full mx-auto"
+                  alt=""
+                />
+              </div>
+              <div class="flex flex-col justify-center">
+                <div class="flex items-center gap-2">
+                  <i class="fas fa-star text-orange-400"></i>
+                  <p class="text-xl text-gray-500">4.5</p>
+                </div>
+                <h2 class="text-zinc-800 font-bold text-[15px] lg:text-2xl">
+                  Onion 1 KG
+                </h2>
+                <p class="text-gray-500">₹ 30.00</p>
+              </div>
+            </div>
+             <div class=" hidden lg:flex  gap-2 bg-white rounded-xl shadow-lg px-5">
+              <div class="flex items-center">
+                <img
+                  src="c2-assets/onion.png"
+                  class="bg-[#C0C0C0] rounded-full mx-auto"
+                  alt=""
+                />
+              </div>
+              <div class="flex flex-col justify-center">
+                <div class="flex items-center gap-2">
+                  <i class="fas fa-star text-orange-400"></i>
+                  <p class="text-xl text-gray-500">4.5</p>
+                </div>
+                <h2 class="text-zinc-800 font-bold text-[15px] lg:text-2xl">
+                  Onion 1 KG
+                </h2>
+                <p class="text-gray-500">₹ 30.00</p>
+              </div>
+            </div>
+
+
+           
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="lg:px-40 mt-10">
+        <h2 class="text-green-600 text-3xl font-bold">Arrival & Offers</h2>
+        <div class="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-3 px-4 lg:px-0">
+          <!-- Left Banner -->
+          <div
+            class="bg-green-700 border-spacing-1 pl-2 pr-36 pt-3 rounded-xl flex"
+          >
+            <div class="space-y-4 flex flex-col justify-center">
+              <img
+                src="c2-assets/dawat-logo.png"
+                alt="dawat-logo"
+                class="mx-auto"
+              />
+              <button
+                class="text-white lg:text-xl bg-green-400 font-semibold px-1 py-2 rounded shadow hover:bg-green-500 transition text-[10px]"
+              >
+                Cook Exotic Dishes
+              </button>
+              <h2 class="text-white text-2xl lg:text-3xl inline-flex">
+                Up to <span class="font-bold">20% OFF</span>
+              </h2>
+            </div>
+            <div class="">
+              <img
+                src="c2-assets/dawat-mock-up.png"
+                alt="dawat-mock-up"
+                class="mx-auto w-full"
+              />
+            </div>
+          </div>
+          <!--right banner-->
+          <div
+            class="bg-blue-700 border-spacing-1 px-3 pt-3 rounded-xl flex gap-3"
+          >
+            <div class="space-y-2 flex flex-col justify-center">
+              <img
+                src="c2-assets/india-gate-logo.png"
+                alt="india-gate-logo"
+                class="mx-auto"
+              />
+              <button
+                class="text-white bg-green-400 font-semibold px-1 py-2 rounded shadow hover:bg-green-500 transition"
+              >
+                World's Best Basmati Rice
+              </button>
+              <h2 class="text-white text-2xl lg:text-3xl">
+                Up to <span class="font-bold">40% OFF</span>
+              </h2>
+            </div>
+            <div>
+              <img src="c2-assets/india-gate-mock-up.png" alt="dawat-mock-up" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--last section-->
+    <section>
+      <div class="bg-green-600 max-w-[1600px] mt-96 relative py-28">
+        <!--container-->
+        <div
+          class="flex flex-col lg:flex-row justify-between items-center px-4 lg:px-40 py-10 gap-6 mt-14 "
+        >
+          <!--div1-->
+          <div class="space-y-3">
+            <img src="c2-assets/logo-footer.png" alt="logo-footer" />
+            <p class="text-gray-300 text-[10px] lg:text-xl">
+              Discover a world of treats , toys and <br />
+              essentials for your furry <br />
+              friends
+            </p>
+          </div>
+          <hr />
+          <!--div2-->
+          <div class="flex flex-col gap-4 text-white">
+            <p>Product</p>
+            <p>Services</p>
+            <p>Contact us</p>
+          </div>
+
+          <!--div4-->
+          <div class="text-white">
+            <p>Follow us on:</p>
+            <br />
+            <br />
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-youtube"></i>
+          </div>
+        </div>
+        <!--first div-->
+        <div
+          class="bg-[#FFF8E7] rounded-2xl px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 pb-5 lg:py-10 mt-10 lg:mx-40 absolute -top-96 lg:-top-80 mx-8"
+        >
+          <div>
+            <img src="c2-assets/vegetable-busket.png" alt="vegetable-busket" />
+          </div>
+
+          <div class="space-y-3 flex flex-col justify-center">
+            <h2 class="text-2xl font-bold lg:text-3xl text-black">
+              Get Grocery News
+            </h2>
+            <p class="text-gray-600 text-sm lg:text-base">
+              Exclusive offers, new arrivals, and more delivered straight to
+              your inbox.
+            </p>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email"
+              class="border border-gray-300 rounded-lg px-4 py-2 mt-2 w-full lg:w-1/2"
+            />
+            <br />
+            <div>
+              <button
+                class="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600 transition"
+              >
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
